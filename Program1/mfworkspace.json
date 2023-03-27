@@ -1,9 +1,0 @@
-{
-  "version": "4.0",
-  "cobol": {
-    "directives": {
-      "Program1.cbl": [],
-      "Edit_Program.cbl": []
-    }
-  }
-}
