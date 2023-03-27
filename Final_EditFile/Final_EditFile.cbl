@@ -111,89 +111,89 @@
 
       *Heading row 1
        01 ws-Header1.
-           05 filler                     pic x(5) value "Error".
-           05 filler                     pic x(4) value spaces.
+           05 filler                     pic x(5)  value "Error".
+           05 filler                     pic x(4)  value spaces.
            05 filler                     pic x(11) value "Transaction".
-           05 filler                     pic x(2) value spaces.
+           05 filler                     pic x(2)  value spaces.
            05 filler                     pic x(11) value "Transaction".
-           05 filler                     pic x(3) value spaces.
-           05 filler                     pic x(7) value "Payment".
-           05 filler                     pic x(4) value spaces.
-           05 filler                     pic x(5) value "Store".
-           05 filler                     pic x(5) value spaces.
-           05 filler                     pic x(7) value "Invoice".
+           05 filler                     pic x(3)  value spaces.
+           05 filler                     pic x(7)  value "Payment".
+           05 filler                     pic x(4)  value spaces.
+           05 filler                     pic x(5)  value "Store".
+           05 filler                     pic x(5)  value spaces.
+           05 filler                     pic x(7)  value "Invoice".
            05 filler                     pic x(12) value spaces.
-           05 filler                     pic x(6) value "SKU".
-           05 filler                     pic x(1) value spaces.
+           05 filler                     pic x(6)  value "SKU".
+           05 filler                     pic x(1)  value spaces.
 
        01 ws-Header2.
-           05 filler                     pic x(6) value "Number".
-           05 filler                     pic x(6) value spaces.
-           05 filler                     pic x(4) value "Code".
-           05 filler                     pic x(8) value spaces.
-           05 filler                     pic x(6) value "Amount".
-           05 filler                     pic x(7) value spaces.
-           05 filler                     pic x(4) value "Type".
-           05 filler                     pic x(7) value spaces.
-           05 filler                     pic x(6) value "Num".
-           05 filler                     pic x(3) value spaces.
-           05 filler                     pic x(6) value "Number".
+           05 filler                     pic x(6)  value "Number".
+           05 filler                     pic x(6)  value spaces.
+           05 filler                     pic x(4)  value "Code".
+           05 filler                     pic x(8)  value spaces.
+           05 filler                     pic x(6)  value "Amount".
+           05 filler                     pic x(7)  value spaces.
+           05 filler                     pic x(4)  value "Type".
+           05 filler                     pic x(7)  value spaces.
+           05 filler                     pic x(6)  value "Num".
+           05 filler                     pic x(3)  value spaces.
+           05 filler                     pic x(6)  value "Number".
            05 filler                     pic x(13) value spaces.
-           05 filler                     pic x(4) value "Code".
+           05 filler                     pic x(4)  value "Code".
 
        01 ws-Display-Errors.
-           05 filler                     pic x(2) value spaces.
+           05 filler                     pic x(2)  value spaces.
            05 ws-disp-error-num          pic ZZ9.
-           05 filler                     pic x(9) value spaces.
+           05 filler                     pic x(9)  value spaces.
            05 ws-Err-trans-code          pic x.
            05 ws-code-star               pic x.
-           05 filler                     pic x(7) value spaces.
+           05 filler                     pic x(7)  value spaces.
            05 ws-trans-amt               pic x(7).
            05 ws-trans-amt-star          pic x.
-           05 filler                     pic x(5) value spaces.
+           05 filler                     pic x(5)  value spaces.
            05 ws-pay-type                pic xx.
            05 ws-pay-star                pic x.
-           05 filler                     pic x(7) value spaces.
+           05 filler                     pic x(7)  value spaces.
            05 ws-store-num               pic 99.
            05 ws-store-star              pic x.
-           05 filler                     pic x(5) value spaces.
+           05 filler                     pic x(5)  value spaces.
            05 ws-Inv-num1                pic x.
            05 ws-Inv-num2                pic x.
            05 ws-Inv-dash                pic x.
            05 ws-Inv-num3                pic 9(6).
            05 ws-Inv-star                pic x.
-           05 filler                     pic x(5) value spaces.
+           05 filler                     pic x(5)  value spaces.
            05 ws-Sku-Code                pic x(15).
            05 ws-sku-star                pic x.
 
        01 ws-Display-Error-Msg.
            05 filler                     pic x(18) value spaces.
-           05 filler                     pic x value "-".
-           05 filler                     pic x value space.
+           05 filler                     pic x     value "-".
+           05 filler                     pic x     value space.
            05 ws-error-desc              pic x(49).
            05 filler                     pic x(20) value spaces.
 
        01 ws-error-notifications.
-           05 ws-notify-tran-code        pic 9 value 0.
-           05 ws-notify-tran-amt         pic 9 value 0.
-           05 ws-notify-pay-type         pic 9 value 0.
-           05 ws-notify-store-num        pic 9 value 0.
-           05 ws-notify-inv1             pic 9 value 0.
-           05 ws-notify-inv2             pic 9 value 0.
-           05 ws-notify-inv-dash         pic 9 value 0.
-           05 ws-notify-inv-dbl          pic 9 value 0.
-           05 ws-notify-inv-num          pic 9 value 0.
-           05 ws-notify-sku              pic 9 value 0.
+           05 ws-notify-tran-code        pic 9     value 0.
+           05 ws-notify-tran-amt         pic 9     value 0.
+           05 ws-notify-pay-type         pic 9     value 0.
+           05 ws-notify-store-num        pic 9     value 0.
+           05 ws-notify-inv1             pic 9     value 0.
+           05 ws-notify-inv2             pic 9     value 0.
+           05 ws-notify-inv-dash         pic 9     value 0.
+           05 ws-notify-inv-dbl          pic 9     value 0.
+           05 ws-notify-inv-num          pic 9     value 0.
+           05 ws-notify-sku              pic 9     value 0.
 
        01 ws-counters.
-           05 ws-total-records           pic 999 value 000.
-           05 ws-total-invalid           pic 999 value 000.
-           05 ws-total-valid             pic 999 value 000.
+           05 ws-total-records           pic 999   value 000.
+           05 ws-total-invalid           pic 999   value 000.
+           05 ws-total-valid             pic 999   value 000.
            05 ws-counter                 pic 99.
-           05 ws-error-num               pic 999 value 000.
+           05 ws-error-num               pic 999   value 000.
 
       *CONSTANTS
-       77 ws-per-page                    pic 99 value 10.
+       77 ws-per-page                    pic 99    value 10.
        77 ws-Err-Tran-Code               pic x(26) value
                                          "INCORRECT TRANSACTION CODE".
        77 ws-Err-Trans-Amt               pic x(47) value
@@ -216,17 +216,17 @@
                                          "SKU CODE CAN NOT BE EMPTY".
 
       *End of File Flags
-       77 ws-eof-flag                    pic x value "n".
-       77 ws-eof-Y                       pic x value "y".
-       77 ws-eof-N                       pic x value "n".
+       77 ws-eof-flag                    pic x     value "n".
+       77 ws-eof-Y                       pic x     value "y".
+       77 ws-eof-N                       pic x     value "n".
 
        01 ws-Final-Display-Info.
            05 ws-Records.
                10 filler                 pic x(16) value
                                          "Records Checked".
-               10 filler                 pic x(8) value spaces.
-               10 filler                 pic x value "-".
-               10 filler                 pic x value space.
+               10 filler                 pic x(8)  value spaces.
+               10 filler                 pic x     value "-".
+               10 filler                 pic x     value space.
                10 ws-Records-count       pic ZZ9.
                10 filler                 pic x(60) value spaces.
 
@@ -234,17 +234,17 @@
                10 filler                 pic x(13) value
                                          "Valid Records".
                10 filler                 pic x(11) value spaces.
-               10 filler                 pic x value "-".
-               10 filler                 pic x value space.
+               10 filler                 pic x     value "-".
+               10 filler                 pic x     value space.
                10 ws-Valid-Count         pic ZZ9.
                10 filler                 pic x(60) value spaces.
 
            05 ws-Invalid.
                10 filler                 pic x(15) value
                                          "Invalid Records".
-               10 filler                 pic x(9) value spaces.
-               10 filler                 pic x value "-".
-               10 filler                 pic x value space.
+               10 filler                 pic x(9)  value spaces.
+               10 filler                 pic x     value "-".
+               10 filler                 pic x     value space.
                10 ws-Invalid-Count       pic ZZ9.
                10 filler                 pic x(60) value spaces.
 
@@ -300,9 +300,9 @@
       *This will write my name at the top of the report.
        150-Write-Name-Header.
            write report-line from spaces.
-           move ws-heading-main-title to report-line.
+           move ws-heading-main-title  to report-line.
            write report-line.
-           move ws-heading-names to report-line
+           move ws-heading-names       to report-line
            write report-line before advancing 2 lines.
 
       *************************************************************
@@ -339,25 +339,25 @@
       **************************************************************
 
        450-Move-Data-Over.
-           move ir-trans-code to ws-Err-trans-code.
-           move ir-trans-amt to ws-trans-amt.
-           move ir-payment-type to ws-pay-type.
-           move ir-store-num to ws-store-num.
-           move ir-invoice-num1 to ws-Inv-num1.
-           move ir-invoice-num2 to ws-Inv-num2.
-           move ir-invoice-dash to ws-Inv-dash.
-           move ir-invoice-valid-nums to ws-Inv-num3.
-           move ir-Sku-Code to ws-Sku-Code.
+           move ir-trans-code          to ws-Err-trans-code.
+           move ir-trans-amt           to ws-trans-amt.
+           move ir-payment-type        to ws-pay-type.
+           move ir-store-num           to ws-store-num.
+           move ir-invoice-num1        to ws-Inv-num1.
+           move ir-invoice-num2        to ws-Inv-num2.
+           move ir-invoice-dash        to ws-Inv-dash.
+           move ir-invoice-valid-nums  to ws-Inv-num3.
+           move ir-Sku-Code            to ws-Sku-Code.
 
 
       *Check Transaction Code
        500-Check-Trans-Code.
            if input-trans-valid then
-               move 0 to ws-notify-tran-code
+               move 0      to ws-notify-tran-code
                move spaces to ws-code-star
            else
-               move 1 to ws-notify-tran-code
-               move "*" to ws-code-star
+               move 1      to ws-notify-tran-code
+               move "*"    to ws-code-star
            end-if.
 
 
@@ -366,11 +366,11 @@
       *Check Transaction Amount
        510-Check-Trans-Amt.
            if ir-trans-amt is numeric
-               move 0 to ws-notify-tran-amt
+               move 0      to ws-notify-tran-amt
                move spaces to ws-trans-amt-star
            else
-               move 1 to ws-notify-tran-amt
-               move "*" to ws-trans-amt-star
+               move 1      to ws-notify-tran-amt
+               move "*"    to ws-trans-amt-star
            end-if.
 
 
@@ -379,11 +379,11 @@
       *Check the Payment Type
        520-Check-Pay-Type.
            if input-type-valid then
-               move 0 to ws-notify-pay-type
+               move 0      to ws-notify-pay-type
                move spaces to ws-pay-star
            else
-               move 1 to ws-notify-pay-type
-               move "*" to ws-pay-star
+               move 1      to ws-notify-pay-type
+               move "*"    to ws-pay-star
            end-if.
 
       **************************************************************
@@ -391,11 +391,11 @@
       *Check if the store number is Valid
        530-Check-Store-Number.
            if input-num-valid then
-               move 0 to ws-notify-store-num
+               move 0      to ws-notify-store-num
                move spaces to ws-store-star
            else
-               move 1 to ws-notify-store-num
-               move "*" to ws-store-star
+               move 1      to ws-notify-store-num
+               move "*"    to ws-store-star
            end-if.
 
 
@@ -405,46 +405,46 @@
        540-Check-All-Inv.
       *CHECK SEPERATELY TO GET ALL ERRORS
            if not input-valid-1 then
-               move 1 to ws-notify-inv1
+               move 1      to ws-notify-inv1
            else
-               move 0 to ws-notify-inv1
+               move 0      to ws-notify-inv1
            end-if.
 
            if not input-valid-2 then
-               move 1 to ws-notify-inv2
+               move 1      to ws-notify-inv2
            else
-               move 0 to ws-notify-inv2
+               move 0      to ws-notify-inv2
            end-if.
 
            if not input-valid-inv1 then
-               move 1 to ws-notify-inv-dash
+               move 1      to ws-notify-inv-dash
            else
-               move 0 to ws-notify-inv-dash
+               move 0      to ws-notify-inv-dash
            end-if.
 
            if ir-invoice-num1 = ir-invoice-num2 then
-               move 1 to ws-notify-inv-dbl
+               move 1      to ws-notify-inv-dbl
            else
-               move 0 to ws-notify-inv-dbl
+               move 0      to ws-notify-inv-dbl
            end-if.
 
            if input-inva-nums-low or input-inva-nums-high or 
              ir-invoice-valid-nums not numeric then
-               move 1 to ws-notify-inv-num
+               move 1      to ws-notify-inv-num
            else
-               move 0 to ws-notify-inv-num
+               move 0      to ws-notify-inv-num
            end-if.
 
-           if ws-notify-inv1 = 1 or ws-notify-inv2 = 1 or
-             ws-notify-inv-dash = 1 or ws-notify-inv-dbl = 1 or
+           if ws-notify-inv1 = 1       or ws-notify-inv2 = 1    or
+             ws-notify-inv-dash = 1    or ws-notify-inv-dbl = 1 or
              ws-notify-inv-num = 1 then
-               move "*" to ws-Inv-star
+               move "*"    to ws-Inv-star
            end-if.
 
-           if ws-notify-inv1 = 0 and ws-notify-inv2 = 0 and
-             ws-notify-inv-dash = 0 and ws-notify-inv-dbl = 0 and
+           if ws-notify-inv1 = 0    and ws-notify-inv2 = 0     and
+             ws-notify-inv-dash = 0 and ws-notify-inv-dbl = 0  and
              ws-notify-inv-num = 0 then
-               move space to ws-Inv-star
+               move space  to ws-Inv-star
            end-if.
  
 
@@ -454,10 +454,10 @@
       *Checking if the Sku exists or is blank.
        550-Check-SKU.
            if ir-Sku-Code equals spaces then
-               move 1 to ws-notify-sku
-               move "*" to ws-sku-star
+               move 1      to ws-notify-sku
+               move "*"    to ws-sku-star
            else
-               move 0 to ws-notify-sku
+               move 0      to ws-notify-sku
                move spaces to ws-sku-star
            end-if.
 
@@ -491,8 +491,8 @@
              ws-notify-inv-num = 1     or ws-notify-sku = 1        then
       *        INVALID CHECK
                perform 65-Store-Invalid-File
-               add 1 to ws-total-invalid
-               add 1 to ws-error-num
+               add 1             to ws-total-invalid
+               add 1             to ws-error-num
                move ws-error-num to ws-disp-error-num
                write report-line from ws-Display-Errors after advancing
                  1 line
@@ -513,42 +513,42 @@
            end-if.
 
            if ws-notify-pay-type = 1 then
-               move ws-Err-Pay-Type to ws-error-desc
+               move ws-Err-Pay-Type    to ws-error-desc
                write report-line from ws-Display-Error-Msg
            end-if.
 
            if ws-notify-store-num = 1 then
-               move ws-Err-Store-Num to ws-error-desc
+               move ws-Err-Store-Num   to ws-error-desc
                write report-line from ws-Display-Error-Msg
            end-if.
 
            if ws-notify-inv1 = 1 then
-               move ws-Err-Inv-Let1 to ws-error-desc
+               move ws-Err-Inv-Let1    to ws-error-desc
                write report-line from ws-Display-Error-Msg
            end-if.
 
            if ws-notify-inv2 = 1 then
-               move ws-Err-Inv-Let2 to ws-error-desc
+               move ws-Err-Inv-Let2    to ws-error-desc
                write report-line from ws-Display-Error-Msg
            end-if.
 
            if ws-notify-inv-dash = 1 then
-               move ws-Err-Inv-Dash to ws-error-desc
+               move ws-Err-Inv-Dash    to ws-error-desc
                write report-line from ws-Display-Error-Msg
            end-if.
 
            if ws-notify-inv-dbl = 1 then
-               move ws-Err-Inv-Double to ws-error-desc
+               move ws-Err-Inv-Double  to ws-error-desc
                write report-line from ws-Display-Error-Msg
            end-if.
 
            if ws-notify-inv-num = 1 then
-               move ws-Err-Inv-Num to ws-error-desc
+               move ws-Err-Inv-Num     to ws-error-desc
                write report-line from ws-Display-Error-Msg
            end-if.
 
            if ws-notify-sku = 1 then
-               move ws-Err-SKU to ws-error-desc
+               move ws-Err-SKU         to ws-error-desc
                write report-line from ws-Display-Error-Msg
            end-if.
 
@@ -556,16 +556,16 @@
 
       *This will print all the final counts for the entire report
        700-Print-Final-Count.
-           move ws-total-records to ws-Records-count.
-           move ws-total-valid to ws-Valid-Count.
-           move ws-total-invalid to ws-Invalid-Count.
+           move ws-total-records   to ws-Records-count.
+           move ws-total-valid     to ws-Valid-Count.
+           move ws-total-invalid   to ws-Invalid-Count.
 
-           move "--------------------------------------" to report-line.
+           move "----------------" to report-line.
            write report-line.
 
-           write report-line from ws-Records before advancing 2 lines.
-           write report-line from ws-Valid before advancing 2 lines.
-           write report-line from ws-Invalid before advancing 2 lines.
+           write report-line from ws-Records   before advancing 2 lines.
+           write report-line from ws-Valid     before advancing 2 lines.
+           write report-line from ws-Invalid   before advancing 2 lines.
 
       **************************************************************
 
