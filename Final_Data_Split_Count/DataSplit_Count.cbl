@@ -151,7 +151,7 @@
                                                 spaces.
            05 filler                        pic x(20)          value
                                                 "Total S&L Amount  = ".
-           05 sl-amount                     pic ZZ,ZZZ,ZZ9.99  value
+           05 sl-amount                     pic ZZ,ZZ9.99      value
                                                 0.
 
       * S output
@@ -166,7 +166,7 @@
                                                 spaces.
            05 filler                        pic x(20)          value
                                                 "Total S Amount    = ".
-           05 s-amount                      pic ZZ,ZZZ,ZZ9.99 value
+           05 s-amount                      pic ZZ,ZZ9.99      value
                                                 0.
 
       * L output
@@ -181,10 +181,212 @@
                                                 spaces.
            05 filler                        pic x(20)          value
                                                 "Total L Amount    = ".
-           05 l-amount                      pic ZZ,ZZZ,ZZ9.99  value   
+           05 l-amount                      pic Z,ZZ9.99       value   
                                                 0.
 
       * S & L store output
+       01 ws-store-header.
+           05 filler                        pic x(12)          value 
+                                                spaces.
+           05 filler                        pic x(16)          value
+                                                "Total Amount for".
+           05 filler                        pic x(12)          value
+                                                " each Store:".
+
+       01 ws-store-1-2.
+           05 filler                        pic x(14)          value 
+                                                spaces.
+           05 filler                        pic x(4)           value 
+                                                "01: ".
+           05 sl-store-1                    pic Z,ZZ9.99       value
+                                                0.
+           05 filler                        pic x(7)           value 
+                                                spaces.
+           05 filler                        pic x(4)           value 
+                                                "02: ".
+           05 sl-store-2                    pic Z,ZZ9.99       value 
+                                                0.
+
+       01 ws-store-3-4.
+           05 filler                        pic x(14)          value 
+                                                spaces.
+           05 filler                        pic x(4)           value 
+                                                "03: ".
+           05 sl-store-3                    pic Z,ZZ9.99       value
+                                                0.
+           05 filler                        pic x(7)           value 
+                                                spaces.
+           05 filler                        pic x(4)           value 
+                                                "04: ".
+           05 sl-store-4                    pic Z,ZZ9.99       value   
+                                                0.
+
+       01 ws-store-5-12.
+           05 filler                        pic x(14)          value 
+                                                spaces.
+           05 filler                        pic x(4)           value 
+                                                "05: ".
+           05 sl-store-5                    pic Z,ZZ9.99       value
+                                                0.
+           05 filler                        pic x(7)           value 
+                                                spaces.
+           05 filler                        pic x(4)           value 
+                                                "12: ".
+           05 sl-store-12                   pic Z,ZZ9.99       value 
+                                                0.
+
+      * % of payment types
+       01 ws-payment-header.
+           05 filler                        pic x(12)          value
+                                                spaces.
+           05 filler                        pic x(18)          value
+                                                "% Payment in each ".
+           05 filler                        pic x(16) value
+                                                "payment category".
+
+       01 ws-payment.
+           05 filler                        pic x(8)           value 
+                                                spaces.
+           05 filler                        pic x(6)           value 
+                                                "CA = %".
+           05 ca-percent                    pic 99             value
+                                                0.
+           05 filler                        pic x(5)           value 
+                                                spaces.
+           05 filler                        pic x(6)           value 
+                                                "CR = %".
+           05 cr-percent                    pic 99             value 
+                                                0.
+           05 filler                        pic x(5)           value 
+                                                spaces.
+           05 filler                        pic x(6)           value 
+                                                "DB = %".
+           05 db-percent                    pic 99             value 
+                                                0.
+
+      * Returns
+       01 ws-return-header.
+           05 filler                        pic xx             value 
+                                                spaces.
+           05 filler                        pic x(7)           value 
+                                                "Returns".
+
+       01 ws-return-totals.
+           05 filler                        pic x(6)           value 
+                                                spaces.
+           05 filler                        pic x(20)          value
+                                                "Total R Records   = ".
+           05 r-records                     pic 99             value   
+                                                0.
+           05 filler                        pic x(10)          value 
+                                                spaces.
+           05 filler                        pic x(20) value
+                                                "Total R Amount    = ".
+           05 r-amount                      pic ZZ9.99         value    
+                                                0.
+
+      * Total returns for each store header
+       01 ws-store-return-header.
+           05 filler                        pic x(14)          value 
+                                                spaces.
+           05 filler                        pic x(18)          value
+                                                "Rerturns & Amount ".
+           05 filler                        pic x(15)          value
+                                                "for each store:".
+
+      * Total returns and amount for each store
+       01 ws-store-1.
+           05 filler                        pic x(14)          value 
+                                                spaces.
+           05 filler                        pic x(4)           value 
+                                                "01: ".
+           05 r-store-1                     pic Z9             value   
+                                                0.
+           05 filler                        pic x(18)          value 
+                                                spaces.
+           05 filler                        pic x(4)           value 
+                                                "01: ".
+           05 r-store-1-a                   pic ZZ9.99         value
+                                                0.
+
+       01 ws-store-2.
+           05 filler                        pic x(14)          value 
+                                                spaces.
+           05 filler                        pic x(4)           value 
+                                                "02: ".
+           05 r-store-2                     pic Z9             value   
+                                                0.
+           05 filler                        pic x(18)          value 
+                                                spaces.
+           05 filler                        pic x(4)           value 
+                                                "02: ".
+           05 r-store-2-a                   pic ZZ9.99         value
+                                                0.
+
+       01 ws-store-3.
+           05 filler                        pic x(14)          value 
+                                                spaces.
+           05 filler                        pic x(4)           value 
+                                                "03: ".
+           05 r-store-3                     pic Z9             value   
+                                                0.
+           05 filler                        pic x(18)          value 
+                                                spaces.
+           05 filler                        pic x(4)           value 
+                                                "03: ".
+           05 r-store-3-a                   pic ZZ9.99         value
+                                                0.
+
+       01 ws-store-4.
+           05 filler                        pic x(14)          value 
+                                                spaces.
+           05 filler                        pic x(4)           value 
+                                                "04: ".
+           05 r-store-4                     pic Z9             value   
+                                                0.
+           05 filler                        pic x(18)          value 
+                                                spaces.
+           05 filler                        pic x(4)           value 
+                                                "04: ".
+           05 r-store-4-a                   pic ZZ9.99         value
+                                                0.
+
+       01 ws-store-5.
+           05 filler                        pic x(14)          value 
+                                                spaces.
+           05 filler                        pic x(4)           value 
+                                                "05: ".
+           05 r-store-5                     pic Z9             value   
+                                                0.
+           05 filler                        pic x(18)          value 
+                                                spaces.
+           05 filler                        pic x(4)           value 
+                                                "05: ".
+           05 r-store-5-a                   pic ZZ9.99         value
+                                                0.
+
+       01 ws-store-12.
+           05 filler                        pic x(14)          value 
+                                                spaces.
+           05 filler                        pic x(4)           value 
+                                                "12: ".
+           05 r-store-12                    pic Z9             value   
+                                                0.
+           05 filler                        pic x(18)          value 
+                                                spaces.
+           05 filler                        pic x(4)           value 
+                                                "12: ".
+           05 r-store-12-a                  pic ZZ9.99         value
+                                                0.
+
+      * Grand total amount
+       01 ws-grand-total.
+           05 filler                        pic xx             value 
+                                                spaces.
+           05 filler                        pic x(21)          value
+                                                "Grand Total Amount = ".
+           05 grand-total                   pic ZZ,ZZ9.99      value   
+                                                0.
 
       * Flags
        01 ws-flags.
@@ -231,8 +433,11 @@
 
       * Payment Type
            05 ws-total-ca                   pic 99             value 0.
-           05 ws-total-cd                   pic 99             value 0.
+           05 ws-total-cr                   pic 99             value 0.
            05 ws-total-db                   pic 99             value 0.
+           05 ca-percent-c                  pic 99v99          value 0.
+           05 cr-percent-c                  pic 99v99          value 0.
+           05 db-percent-c                  pic 99v99          value 0.
 
       * -----------------------
        PROCEDURE DIVISION.
@@ -245,6 +450,8 @@
            perform 250-Process-Lines
              until ws-eof equals ws-eof-Y.
 
+           perform 700-Prepare-Output.
+           perform 750-write-Report.
            perform 800-Close-Files.
 
            GOBACK.
@@ -311,7 +518,7 @@
                    add 1               to ws-total-ca
                end-if
                if il-credit
-                   add 1               to ws-total-cd
+                   add 1               to ws-total-cr
                end-if
                if il-debit
                    add 1               to ws-total-db
@@ -357,6 +564,91 @@
            if ws-eof equal ws-eof-N
                perform 200-Read-File
            end-if.
+
+       700-Prepare-Output.
+      * Move values to output
+           move ws-total-s-l                       to sl-records.
+           move ws-total-s-l-amount                to sl-amount.
+           move ws-total-s                         to s-records.
+           move ws-total-s-amount                  to s-amount.
+           move ws-total-l                         to l-records.
+           move ws-total-l-amount                  to l-amount.
+           move ws-total-sl-01-amount              to sl-store-1.
+           move ws-total-sl-02-amount              to sl-store-2.
+           move ws-total-sl-03-amount              to sl-store-3.
+           move ws-total-sl-04-amount              to sl-store-4.
+           move ws-total-sl-05-amount              to sl-store-5.
+           move ws-total-sl-12-amount              to sl-store-12.
+
+      * Calculate % of payment type
+           divide ws-total-ca          by ws-total-s-l
+               giving ca-percent-c     rounded.
+
+           divide ws-total-cr          by ws-total-s-l
+               giving cr-percent-c     rounded.
+
+           divide ws-total-db          by ws-total-s-l
+               giving db-percent-c     rounded.
+
+           multiply ca-percent-c       by 100
+               giving ca-percent.
+           multiply cr-percent-c       by 100
+               giving cr-percent.
+           multiply db-percent-c       by 100
+               giving db-percent.
+
+      * Move return values
+           move ws-total-r                         to r-records.
+           move ws-total-r-amount                  to r-amount.
+           move ws-total-01-records                to r-store-1
+           move ws-total-r-01-amount               to r-store-1-a.
+
+           move ws-total-02-records                to r-store-2
+           move ws-total-r-02-amount               to r-store-2-a.
+
+           move ws-total-03-records                to r-store-3
+           move ws-total-r-03-amount               to r-store-3-a.
+
+           move ws-total-04-records                to r-store-4
+           move ws-total-r-04-amount               to r-store-4-a.
+
+           move ws-total-05-records                to r-store-5
+           move ws-total-r-05-amount               to r-store-5-a.
+
+           move ws-total-12-records                to r-store-12
+           move ws-total-r-12-amount               to r-store-12-a.
+
+      * Grand total calculation
+           subtract ws-total-r-amount  from ws-total-s-l-amount
+               giving grand-total      rounded.
+
+       750-Write-Report.
+           write report-line           from ws-sl-totals-1.
+           write report-line           from spaces.
+           write report-line           from ws-s-totals.
+           write report-line           from spaces.
+           write report-line           from ws-l-totals.
+           write report-line           from spaces.
+           write report-line           from ws-store-header.
+           write report-line           from ws-store-1-2.
+           write report-line           from ws-store-3-4.
+           write report-line           from ws-store-5-12.
+           write report-line           from spaces.
+           write report-line           from ws-payment-header.
+           write report-line           from ws-payment.
+           write report-line           from spaces.
+           write report-line           from ws-return-header.
+           write report-line           from ws-return-totals.
+           write report-line           from spaces.
+           write report-line           from ws-store-return-header.
+           write report-line           from ws-store-1.
+           write report-line           from ws-store-2.
+           write report-line           from ws-store-3.
+           write report-line           from ws-store-4.
+           write report-line           from ws-store-5.
+           write report-line           from ws-store-12.
+           write report-line           from spaces.
+           write report-line           from ws-grand-total.
 
        800-Close-Files.
            close input-file.
