@@ -247,22 +247,28 @@
        01 ws-payment.
            05 filler                        pic x(8)           value 
                                                 spaces.
-           05 filler                        pic x(6)           value 
-                                                "CA = %".
+           05 filler                        pic x(5)           value 
+                                                "CA = ".
            05 ca-percent                    pic 99             value
                                                 0.
+           05 filler                        pic x              value 
+                                                "%".
            05 filler                        pic x(5)           value 
                                                 spaces.
-           05 filler                        pic x(6)           value 
-                                                "CR = %".
+           05 filler                        pic x(4)           value 
+                                                "CR = ".
            05 cr-percent                    pic 99             value 
                                                 0.
+           05 filler                        pic x              value 
+                                                "%".
            05 filler                        pic x(5)           value 
                                                 spaces.
-           05 filler                        pic x(6)           value 
-                                                "DB = %".
+           05 filler                        pic x(5)           value 
+                                                "DB = ".
            05 db-percent                    pic 99             value 
                                                 0.
+           05 filler                        pic x              value 
+                                                "%".
 
       * Returns
        01 ws-return-header.

@@ -16,7 +16,7 @@ Members: Martin Barber, Robert Savoie, Alex Blackmore, Rhys Thompson
               05: 1,389.42       12: 9,669.94
 
             % Payment in each payment category
-        CA = %26     CR = %27     DB = %47
+        CA = 26%     CR =27%     DB = 47%
 
   Returns
       Total R Records   = 15          Total R Amount    = 609.87
