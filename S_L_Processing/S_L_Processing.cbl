@@ -151,7 +151,7 @@
        01 ws-total-line4.
            05 filler                   pic x(21)   value
                                        "Total Type percent : ".
-           05 ws-total-type-percent    pic zz9.99.
+           05 ws-total-type-percent    pic zz9.
            05 filler                   pic x       value "%".
            05 filler                   pic x(72)   value spaces.
       *
