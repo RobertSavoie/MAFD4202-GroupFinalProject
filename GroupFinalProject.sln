@@ -5,6 +5,8 @@ VisualStudioVersion = 17.4.33403.182
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{535C04D7-A2A5-47C7-83E0-B340A995CD1F}") = "Final_EditFile", "Final_EditFile\Final_EditFile.cblproj", "{77741EA3-960A-48BB-A118-97632C6C41CE}"
 EndProject
+Project("{535C04D7-A2A5-47C7-83E0-B340A995CD1F}") = "Final_Data_Split_Count", "Final_Data_Split_Count\Final_Data_Split_Count.cblproj", "{3B175C81-5EF1-4B94-81A7-6E295BC4BD7D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -15,6 +17,10 @@ Global
 		{77741EA3-960A-48BB-A118-97632C6C41CE}.Debug|x86.Build.0 = Debug|x86
 		{77741EA3-960A-48BB-A118-97632C6C41CE}.Release|x86.ActiveCfg = Release|x86
 		{77741EA3-960A-48BB-A118-97632C6C41CE}.Release|x86.Build.0 = Release|x86
+		{3B175C81-5EF1-4B94-81A7-6E295BC4BD7D}.Debug|x86.ActiveCfg = Debug|x86
+		{3B175C81-5EF1-4B94-81A7-6E295BC4BD7D}.Debug|x86.Build.0 = Debug|x86
+		{3B175C81-5EF1-4B94-81A7-6E295BC4BD7D}.Release|x86.ActiveCfg = Release|x86
+		{3B175C81-5EF1-4B94-81A7-6E295BC4BD7D}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
