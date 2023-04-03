@@ -30,7 +30,7 @@
 
       *This is where the file will be output to
            select valid-data-file
-               assign to "../../../../output/Valid-Data.out"
+               assign to "../../../../data/Valid-Data.dat"
                organization is line sequential.
 
       *
