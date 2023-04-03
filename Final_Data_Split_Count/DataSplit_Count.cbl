@@ -26,7 +26,7 @@
 
       * Output report
            select report-file
-               assign to "../../../../output/Counts_Control_Totals.out"
+               assign to "../../../../output/Counts-Control-Totals.out"
                    organization is line sequential.
 
       * -----------------------

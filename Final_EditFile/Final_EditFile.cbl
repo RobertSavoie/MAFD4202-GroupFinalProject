@@ -20,12 +20,12 @@
 
       *This is where the file will be output to
            select report-file
-               assign to "../../../../output/F1_Validation.out"
+               assign to "../../../../output/Error-Report.out"
                organization is line sequential.
 
       *This is where the file will be output to
            select invalid-data-file
-               assign to "../../../../output/Invalid-Data.out"
+               assign to "../../../../data/Invalid-Data.dat"
                organization is line sequential.
 
       *This is where the file will be output to
