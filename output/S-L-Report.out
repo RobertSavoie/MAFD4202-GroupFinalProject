@@ -1,0 +1,217 @@
+
+Group 15 - Final Assignment -Members: Martin Barber, Robert Savoie, Alex Blackmore, Rhys Thompson
+
+                                             S&L Report
+
+ Line    Transaction  Transaction   Payment    Store        Invoice            SKU              Tax
+ Num        Code        Amount       Type       Num         Number             Code            Owing
+
+  1          S            10.00       CA         01      AB-000100001     SDFSKJ84MS09123       1.30
+
+  2          S           129.99       DB         01      BC-000200002     247R20EHF02EF8E      16.89
+
+  3          S            89.99       CR         01      DE-000300003     WI8HRW8H43FJSHF      11.69
+
+  4          L            49.99       DB         01      EA-000400004     LFW8H88W84HFW4F       6.49
+
+  5          S            29.99       DB         01      CE-000800007     WI8HRW8H43FJSHF       3.89
+
+  6          S           129.99       DB         01      BD-000110009     247R20EHF02EF8E      16.89
+
+  7          S            89.99       CR         01      DA-000120010     WI8HRW8H43FJSHF      11.69
+
+  8          S            10.00       CA         01      AC-000130011     SDFSKJ84MS09123       1.30
+
+  9          L         1,129.99       DB         01      CE-000140012     247R20EHF02EF8E     146.89
+
+ 10          L            10.00       CA         01      CE-000160101     SDFSKJ84MS09123       1.30
+
+ 11          S           129.99       DB         01      AB-000170102     247R20EHF02EF8E      16.89
+
+ 12          S            89.99       CR         01      CD-000180103     WI8HRW8H43FJSHF      11.69
+
+ 13          L            49.99       DB         01      EA-000190104     LFW8H88W84HFW4F       6.49
+
+ 14          S            20.00       CA         01      DE-000210105     SDFSKJ84MS09123       2.60
+
+ 15          S           149.99       CR         01      AD-000220106     247R20EHF02EF8E      19.49
+
+ 16          S            10.00       CA         01      BC-000270111     SDFSKJ84MS09123       1.30
+
+ 17          S         1,129.99       DB         01      DE-000280112     247R20EHF02EF8E     146.89
+
+ 18          S             9.99       CR         01      AB-000290113     WI8HRW8H43FJSHF       1.29
+
+ 19          L            49.99       DB         02      CD-000300014     LFW8H88W84HFW4F       6.49
+
+ 20          S           149.99       CR         02      AC-000330016     247R20EHF02EF8E      19.49
+
+Group 15 - Final Assignment -Members: Martin Barber, Robert Savoie, Alex Blackmore, Rhys Thompson
+
+                                             S&L Report
+
+ Line    Transaction  Transaction   Payment    Store        Invoice            SKU              Tax
+ Num        Code        Amount       Type       Num         Number             Code            Owing
+
+  1          S            29.99       DB         02      AE-000340017     WI8HRW8H43FJSHF       3.89
+
+  2          S           129.99       DB         02      CB-000360019     247R20EHF02EF8E      16.89
+
+  3          S            89.99       CR         02      DC-000370023     WI8HRW8H43FJSHF      11.69
+
+  4          L            49.99       DB         02      ED-000380024     LFW8H88W84HFW4F       6.49
+
+  5          S            20.00       CA         02      AB-000400025     SDFSKJ84MS09123       2.60
+
+  6          S           149.99       CR         02      AC-000410026     247R20EHF02EF8E      19.49
+
+  7          S            29.99       DB         02      AD-000420027     WI8HRW8H43FJSHF       3.89
+
+  8          S            10.00       CA         02      AE-000430028     SDFSKJ84MS09123       1.30
+
+  9          S           129.99       DB         02      BA-000440029     247R20EHF02EF8E      16.89
+
+ 10          S         1,129.99       DB         02      BE-000470032     247R20EHF02EF8E     146.89
+
+ 11          L           149.99       DB         02      CB-000490034     LFW8H88W84HFW4F      19.49
+
+ 12          L            49.99       DB         02      DC-000540214     LFW8H88W84HFW4F       6.49
+
+ 13          S           149.99       CR         02      EB-000570216     247R20EHF02EF8E      19.49
+
+ 14          S            10.00       CA         02      ED-000590201     AADFSKJ84MS0913       1.30
+
+ 15          S            89.99       CR         02      AC-000610223     WI8HRW8H43FJSHF      11.69
+
+ 16          L            49.99       DB         02      AD-000620224     LFW8H88W84HFW4F       6.49
+
+ 17          S            29.99       DB         02      EC-000660227     WI8HRW8H43FJSHF       3.89
+
+ 18          S            10.00       CA         02      ED-000670228     SDFSKJ84MS09123       1.30
+
+ 19          S           129.99       DB         02      BA-000680229     247R20EHF02EF8E      16.89
+
+ 20          S            89.99       CR         02      BD-000690230     WI8HRW8H43FJSHF      11.69
+
+Group 15 - Final Assignment -Members: Martin Barber, Robert Savoie, Alex Blackmore, Rhys Thompson
+
+                                             S&L Report
+
+ Line    Transaction  Transaction   Payment    Store        Invoice            SKU              Tax
+ Num        Code        Amount       Type       Num         Number             Code            Owing
+
+  1          S            10.00       CA         02      BE-000700231     SDFSKJ84MS09123       1.30
+
+  2          S         1,129.99       DB         02      BC-000710232     247R20EHF02EF8E     146.89
+
+  3          S             9.99       CR         02      CA-000720233     WI8HRW8H43FJSHF       1.29
+
+  4          S            29.99       DB         02      DB-000760337     WI8HRW8H43FJSH2       3.89
+
+  5          S            10.00       CA         03      DC-000770401     SDFSKJ84MS09123       1.30
+
+  6          S           129.99       DB         03      DE-000780402     247R20EHF02EF8E      16.89
+
+  7          S            89.99       CR         03      EA-000790403     WI8HRW8H43FJSHF      11.69
+
+  8          L            49.99       DB         03      EB-000800404     LFW8H88W84HFW4F       6.49
+
+  9          S            20.00       CA         03      ED-000820405     SDFSKJ84MS09123       2.60
+
+ 10          S           149.99       CR         03      AB-000830406     247R20EHF02EF8E      19.49
+
+ 11          S            29.99       DB         03      AC-000840407     WI8HRW8H43FJSHF       3.89
+
+ 12          S           129.99       DB         03      AE-000860409     247R20EHF02EF8E      16.89
+
+ 13          S            10.00       CA         03      BD-000880411     SDFSKJ84MS09123       1.30
+
+ 14          L         1,129.99       DB         03      DE-000890412     247R20EHF02EF8E     146.89
+
+ 15          S           129.99       DB         04      BD-000100509     247R20EHF02EF8E      16.89
+
+ 16          S            10.00       CA         04      CA-000102511     SDFSKJ84MS09123       1.30
+
+ 17          S         1,129.99       DB         04      CD-000103512     247R20EHF02EF8E     146.89
+
+ 18          S             9.99       CR         04      CE-000104513     WI8HRW8H43FJSHF       1.29
+
+ 19          L            49.99       DB         04      DA-000105514     LFW8H88W84HFW4F       6.49
+
+ 20          S           149.99       CR         05      DE-000108516     247R20EHF02EF8E      19.49
+
+Group 15 - Final Assignment -Members: Martin Barber, Robert Savoie, Alex Blackmore, Rhys Thompson
+
+                                             S&L Report
+
+ Line    Transaction  Transaction   Payment    Store        Invoice            SKU              Tax
+ Num        Code        Amount       Type       Num         Number             Code            Owing
+
+  1          S            29.99       DB         05      ED-000109517     WI8HRW8H43FJSHF       3.89
+
+  2          S           729.99       DB         05      EB-000111519     247R20EHF02EF8E      94.89
+
+  3          S            89.99       CR         05      EA-000112523     WI8HRW8H43FJSHF      11.69
+
+  4          S            20.00       CA         05      DB-000115525     SDFSKJ84MS09123       2.60
+
+  5          S           149.99       CR         05      DA-000116526     247R20EHF02EF8E      19.49
+
+  6          S            29.99       DB         05      CA-000117527     WI8HRW8H43FJSHF       3.89
+
+  7          S            10.00       CA         05      CB-000118528     SDFSKJ84MS09123       1.30
+
+  8          S           129.49       CA         05      CD-000119529     247R20EHF02EF8E      16.83
+
+  9          S            89.99       CR         12      CE-000120530     WI8HRW8H43FJSHF      11.69
+
+ 10          S         8,010.00       CA         12      DA-000121631     SDFSKJ84MS09123   1,041.30
+
+ 11          S         1,129.99       DB         12      DB-000122632     247R20EHF02EF8E     146.89
+
+ 12          L           149.99       DB         12      DE-000124634     LFW8H88W84HFW4F      19.49
+
+ 13          L            49.99       DB         12      AB-000129614     LFW8H88W84HFW4F       6.49
+
+ 14          S           149.99       CR         12      AE-000132616     247R20EHF02EF8E      19.49
+
+ 15          S            10.00       CA         02      BC-000134601     AADFSKJ84MS0913       1.30
+
+ 16          L            49.99       DB         05      CA-000137624     LFW8H88W84HFW4F       6.49
+
+ 17          S            20.00       CA         01      CD-000139625     SDFSKJ84MS09123       2.60
+
+ 18          S           149.99       CR         02      CE-000140626     247R20EHF02EF8E      19.49
+
+ 19          S            29.99       DB         03      DA-000141627     WI8HRW8H43FJSHF       3.89
+
+ 20          S            10.00       CA         04      DB-000142628     SDFSKJ84MS09123       1.30
+
+Group 15 - Final Assignment -Members: Martin Barber, Robert Savoie, Alex Blackmore, Rhys Thompson
+
+                                             S&L Report
+
+ Line    Transaction  Transaction   Payment    Store        Invoice            SKU              Tax
+ Num        Code        Amount       Type       Num         Number             Code            Owing
+
+  1          S            89.99       CR         12      DE-000144630     WI8HRW8H43FJSHF      11.69
+
+  2          S            10.00       CA         01      EA-000145631     SDFSKJ84MS09123       1.30
+
+  3          S         1,129.99       DB         02      EB-000146632     247R20EHF02EF8E     146.89
+
+  4          S             9.99       CR         03      EC-000147633     WI8HRW8H43FJSHF       1.29
+
+  5          L           149.99       DB         04      ED-000148634     LFW8H88W84HFW4F      19.49
+
+Total S&L  records : 85         Total S    records : 69         Total L    records : 16
+
+Total CA   records : 22         Total CR   records : 23         Total DB   records : 40
+
+Total CA   percent : 25.88%     Total CR   percent : 27.06%     Total DB   percent : 47.06%
+
+Total Type percent : 100.00%
+
+Most Transactions  : Store #02
+
+Total Tax Owed     : 2,968.50

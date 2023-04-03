@@ -7,6 +7,8 @@ Project("{535C04D7-A2A5-47C7-83E0-B340A995CD1F}") = "Final_EditFile", "Final_Edi
 EndProject
 Project("{535C04D7-A2A5-47C7-83E0-B340A995CD1F}") = "Final_Data_Split_Count", "Final_Data_Split_Count\Final_Data_Split_Count.cblproj", "{3B175C81-5EF1-4B94-81A7-6E295BC4BD7D}"
 EndProject
+Project("{535C04D7-A2A5-47C7-83E0-B340A995CD1F}") = "S_L_Processing", "S_L_Processing\S_L_Processing.cblproj", "{C1996E86-C595-4663-9948-7601A50D444B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -21,6 +23,10 @@ Global
 		{3B175C81-5EF1-4B94-81A7-6E295BC4BD7D}.Debug|x86.Build.0 = Debug|x86
 		{3B175C81-5EF1-4B94-81A7-6E295BC4BD7D}.Release|x86.ActiveCfg = Release|x86
 		{3B175C81-5EF1-4B94-81A7-6E295BC4BD7D}.Release|x86.Build.0 = Release|x86
+		{C1996E86-C595-4663-9948-7601A50D444B}.Debug|x86.ActiveCfg = Debug|x86
+		{C1996E86-C595-4663-9948-7601A50D444B}.Debug|x86.Build.0 = Debug|x86
+		{C1996E86-C595-4663-9948-7601A50D444B}.Release|x86.ActiveCfg = Release|x86
+		{C1996E86-C595-4663-9948-7601A50D444B}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

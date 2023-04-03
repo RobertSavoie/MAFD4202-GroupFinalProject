@@ -67,45 +67,49 @@
            data record is report-line
            record contains 89 characters.
       *
-       01 report-line                    pic x(89).
+       01 report-line                  pic x(89).
 
       *If file is not valid. This file will store the information
        fd invalid-data-file
            data record is invalid-data-line
            record contains 36 characters.
       *
-       01 invalid-data-line                    pic x(36).
+       01 invalid-data-line            pic x(36).
 
       *If File is Valid. This file will store the information
        fd valid-data-file
            data record is valid-data-line
            record contains 36 characters.
       *
-       01 valid-data-line                    pic x(36).
+       01 valid-data-line              pic x(36).
 
       *
        working-storage section.
       *
       *Username Heading of the entire file
-       01 ws-heading-main-title.
-           05 filler                     pic x(27) value
+       01 ws-heading-main-title.   
+           05 filler                   pic x(27)   value
                                          "Group 15 - Final Assignment".
-           05 filler                     pic x(3) value " - ".
+           05 filler                   pic x(3)    value " - ".
+           05 filler                   pic x(59).
 
        01 ws-heading-names.
-           05 filler                     pic x(8) value "Members:".
-           05 filler                     pic x value space.
-           05 filler                     pic x(59) value
-           "Martin Barber, Robert Savoie, Alex Blackmore, Rhys Thompson"
-           .
+           05 filler                   pic x(8)    value "Members:".
+           05 filler                   pic x       value space.
+           05 filler                   pic x(29)   value
+                                       "Martin Barber, Robert Savoie,".
+           05 filler                   pic x(30)   value
+                                       " Alex Blackmore, Rhys Thompson".
+           05 filler                   pic x(21).
       *
 
       *Main Title
        01 ws-heading-title.
-           05 filler                     pic x(32) value spaces.
-           05 filler                     pic x(19) value
-                                         "Invalid Report".
-           05 filler                     pic x(24) value spaces.
+           05 filler                   pic x(32)   value spaces.
+           05 filler                   pic x(19)   value
+                                       "Invalid Report".
+           05 filler                   pic x(24)   value spaces.
+           05 filler                   pic x(14)   value spaces.
 
       *
 
