@@ -24,8 +24,7 @@
       *input line
        01 input-line.
          05 il-trans-code                        pic x.
-           88 s-code                             value "S".
-           88 l-code                             value "L".
+           88 r-code                             value "R".
          05 il-trans-amt                         pic 9(5)v99.
          05 il-payment-type                      pic xx.
            88 ca-type                            value "CA".
@@ -64,8 +63,8 @@
       *
        01 ws-heading-title.
          05 filler                               pic x(45) value spaces.
-         05 filler                               pic x(10) value
-                                                 "S&L Report".
+         05 filler                               pic x(14) value
+                                                 "Returns Report".
          05 filler                               pic x(32) value spaces.
          05 filler                               pic x(13) value spaces.
       *
@@ -113,67 +112,47 @@
          05 filler                               pic x(5) value "Owing".
       *
        01 ws-total-line1.
-         05 filler                               pic x(21) value
-                                                "Total S&L  records : ".
-         05 ws-total-sl-count                    pic z9.
+         05 filler                               pic x(17) value
+                                                "Total R  Records: ".
+         05 ws-total-r-count                    pic z9.
          05 filler                               pic x(9) value spaces.
-         05 filler                               pic x(21) value
-                                                "Total S    records : ".
-         05 ws-total-s-count                     pic z9.
-         05 filler                               pic x(9) value spaces.
-         05 filler                               pic x(21) value
-                                                "Total L    records : ".
-         05 ws-total-l-count                     pic z9.
-         05 filler                               pic x(13) value spaces.
+         
+         
       *
        01 ws-total-line2.
-         05 filler                               pic x(21) value
-                                                "Total CA   records : ".
+         05 filler                               pic x(17) value
+                                                "Total CA Records: ".
          05 ws-total-ca-count                    pic z9.
          05 filler                               pic x(9) value spaces.
-         05 filler                               pic x(21) value
-                                                "Total CR   records : ".
+         05 filler                               pic x(17) value
+                                                "Total CR Records: ".
          05 ws-total-cr-count                    pic z9.
          05 filler                               pic x(9) value spaces.
-         05 filler                               pic x(21) value
-                                                "Total DB   records : ".
+         05 filler                               pic x(18) value
+                                                "Total DB Records: ".
          05 ws-total-db-count                    pic z9.
          05 filler                               pic x(13) value spaces.
       *
        01 ws-total-line3.
-         05 filler                               pic x(21) value
-                                                "Total CA   percent : ".
-         05 ws-total-ca-percent                  pic z9.99.
-         05 filler                               pic x value "%".
-         05 filler                               pic x(5) value spaces.
-         05 filler                               pic x(21) value
-                                                "Total CR   percent : ".
-         05 ws-total-cr-percent                  pic z9.99.
-         05 filler                               pic x value "%".
-         05 filler                               pic x(5) value spaces.
-         05 filler                               pic x(21) value
-                                                "Total DB   percent : ".
-         05 ws-total-db-percent                  pic z9.99.
-         05 filler                               pic x value "%".
-         05 filler                               pic x(5) value spaces.
-         05 filler                               pic x(4) value spaces.
-      *
-       01 ws-total-line4.
          05 filler                               pic x(21) value
                                                 "Total Type percent : ".
          05 ws-total-type-percent                pic zz9.
          05 filler                               pic x value "%".
          05 filler                               pic x(72) value spaces.
       *
-       01 ws-total-line5.
+       01 ws-total-line4.
          05 filler                               pic x(28) value
                                          "Most Transactions  : Store #".
          05 ws-most-transactions                 pic 99.
          05 filler                               pic x(70) value spaces.
       *
-       01 ws-total-line6.
-         05 filler                               pic x(21) value
-                                                "Total Tax Owed     : ".
+       01 ws-total-line5.
+         05 filler                               pic x(18) value
+                                                 "Total Amount   : $".
+         05 ws-total-amount-owing                pic z,zz9.99.
+         05 filler                               pic x(10) value spaces.
+         05 filler                               pic x(22) value
+                                               "Total Tax Owed     : $".
          05 ws-total-tax-owing                   pic z,zz9.99.
          05 filler                               pic x(71) value spaces.
       *
@@ -214,20 +193,21 @@
       *
       *variables for doing math
        01 math-section.
+         05 math-total-amount                    pic 9(6)v99.
+         05 math-total-amount-fin                pic 9(6)v99.
          05 math-tax-owing                       pic 9(6)v99.
          05 math-total-tax-owing                 pic 9(6)v99.
          05 math-total-percent                   pic 999v99.
          05 math-ca-percent                      pic 999v9999.
          05 math-cr-percent                      pic 999v9999.
          05 math-db-percent                      pic 999v9999.
+         
       *
       *counters
        01 counters.
          05 cntr-line                            pic 99 value 0.
          05 cntr-page                            pic 99 value 0.
-         05 cntr-sl-total                        pic 99 value 0.
-         05 cntr-s-total                         pic 99 value 0.
-         05 cntr-l-total                         pic 99 value 0.
+         05 cntr-r-total                         pic 99 value 0.
          05 cntr-cr                              pic 99 value 0.
          05 cntr-ca                              pic 99 value 0.
          05 cntr-db                              pic 99 value 0.
@@ -241,6 +221,8 @@
       *constants
        77 const-lines-per-page                   pic 99 value 20.
        77 const-tax-rate                         pic 9v99 value 0.13.
+       77 const-total-amount                     pic 999v99 value
+                                                 609.87.
       *
        procedure division.
        000-main.
@@ -310,21 +292,19 @@
       *
        125-print-footers.
       *print page footers
-           move cntr-sl-total to ws-total-sl-count.
-           move cntr-s-total to ws-total-s-count.
-           move cntr-l-total to ws-total-l-count.
+           move cntr-r-total to ws-total-r-count.
            move cntr-ca to ws-total-ca-count.
            move cntr-cr to ws-total-cr-count.
            move cntr-db to ws-total-db-count.
-           move math-ca-percent to ws-total-ca-percent.
-           move math-cr-percent to ws-total-cr-percent.
-           move math-db-percent to ws-total-db-percent.
+           *> Add math to total amount here
            move math-total-percent to ws-total-type-percent.
            move math-total-tax-owing to ws-total-tax-owing.
+           move math-total-amount-fin to ws-total-amount-owing.
       *
            write output-line
              from ws-total-line1.
       *
+
            write output-line
              from ws-total-line2
              after advancing 1 line.
@@ -336,13 +316,10 @@
            write output-line
              from ws-total-line4
              after advancing 2 lines.
+
       *
            write output-line
              from ws-total-line5
-             after advancing 2 lines.
-      *
-           write output-line
-             from ws-total-line6
              after advancing 2 lines.
       *
        200-process-pages.
@@ -359,7 +336,8 @@
       *
            perform 80-clear-artifacts.
            perform 310-calculate-tax-owing.
-           perform 320-determine-sl-type.
+           perform 315-calculate-total-amount.
+           perform 320-determine-r-type.
            perform 330-detemine-payment-types.
            perform 350-calculate-trans-per-store.
            perform 400-create-output-line.
@@ -370,22 +348,23 @@
       *
            multiply il-trans-amt
              by const-tax-rate
-             giving math-tax-owing.
+             giving math-tax-owing.    
 
            add math-tax-owing
              to math-total-tax-owing.
-      *
-       320-determine-sl-type.
+
+       315-calculate-total-amount.
+      *calculates tax owing and total tax owing
+           
+          move const-total-amount to math-total-amount-fin.
+      
+       320-determine-r-type.
       *determines which transaction type it is
       *
-           if s-code
-               add 1 to cntr-sl-total
-               add 1 to cntr-s-total
+           if R-code
+               add 1 to cntr-r-total
            end-if.
-           if l-code
-               add 1 to cntr-sl-total
-               add 1 to cntr-l-total
-           end-if.
+           
       *
        330-detemine-payment-types.
       *counts the number of CA, CR, and DB
@@ -404,21 +383,21 @@
       *calculates the percentages of each payment type
       *
            divide cntr-ca
-             by cntr-sl-total
+             by cntr-r-total
              giving math-ca-percent rounded.
       *
            multiply 100
              by math-ca-percent.
       *
            divide cntr-cr
-             by cntr-sl-total
+             by cntr-r-total
              giving math-cr-percent rounded.
       *
            multiply 100
              by math-cr-percent.
       *
            divide cntr-db
-             by cntr-sl-total
+             by cntr-r-total
              giving math-db-percent rounded.
       *
            multiply 100

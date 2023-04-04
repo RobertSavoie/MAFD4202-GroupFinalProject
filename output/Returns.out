@@ -1,0 +1,47 @@
+
+Group 15 - Final Assignment -Members: Martin Barber, Robert Savoie, Alex Blackmore, Rhys Thompson
+
+                                             Returns Report
+
+ Line    Transaction  Transaction   Payment    Store        Invoice            SKU              Tax
+ Num        Code        Amount       Type       Num         Number             Code            Owing
+
+  1          R            24.99       CR         01      BD-000500102     FLW8H4FW8H4FWF4       3.24
+
+  2          R            24.99       CR         01      BC-000200102     FLW8H4FW8H4FWF4       3.24
+
+  3          R            29.99       DB         01      EB-000230107     WI8HRW8H43FJSHF       3.89
+
+  4          R            89.99       CR         01      EA-000260110     WI8HRW8H43FJSHF      11.69
+
+  5          R            24.99       CR         02      AE-000390102     FLW8H4FW8H4FWF4       3.24
+
+  6          R            29.99       CA         02      CE-000510035     SDFSKJ84MS09123       3.89
+
+  7          R            20.00       CA         02      EA-000560215     SDFSKJ84MS09123       2.60
+
+  8          R            24.99       CR         02      AE-000630202     FLW8H4FW8H4FWF4       3.24
+
+  9          R           124.99       CR         02      CD-000740322     F4WO8JFO8W4JFW8      16.24
+
+ 10          R            89.99       CR         04      BE-000101510     WI8HRW8H43FJSHF      11.69
+
+ 11          R            20.00       CA         04      DC-000107515     SDFSKJ84MS09123       2.60
+
+ 12          R            24.99       CR         05      DC-000114502     FLW8H4FW8H4FWF4       3.24
+
+ 13          R            29.99       CA         12      EC-000126635     SDFSKJ84MS09123       3.89
+
+ 14          R            24.99       CR         12      AC-000130612     ASEDRFT987KIMYT       3.24
+
+ 15          R            24.99       CR         12      CB-000138602     FLW8H4FW8H4FWF4       3.24
+
+Total R  Records:15
+
+Total CA Records: 4         Total CR Records:10         Total DB Records:  1
+
+Total Type percent : 100%
+
+Most Transactions  : Store #02
+
+Total Amount   : $  609.87          Total Tax Owed     : $   79.17
