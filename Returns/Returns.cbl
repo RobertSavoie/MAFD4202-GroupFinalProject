@@ -1,15 +1,18 @@
        identification division.
        program-id. Returns.
+      *Program Description:
+      *Displaying the results records plus thte total amount and percent
+      *amount. 
 
-        environment division.
+       environment division.
        input-output section.
        file-control.
-      *
+      *Selects input from Return-Data File
            select input-file
                assign to "../../../../data/Return-Data.dat"
                    organization is line sequential.
 
-      *This is where the file will be output to
+      *Displays the output file
            select output-file
                assign to "../../../../output/Returns.out"
                organization is line sequential.
@@ -44,7 +47,7 @@
        01 output-line                            pic x(100).
       *
        working-storage section.
-      *
+      *Displays our group number
        01 ws-heading-main-title.
          05 filler                               pic x(27) value
                                           "Group 15 - Final Assignment".
@@ -67,7 +70,7 @@
                                                  "Returns Report".
          05 filler                               pic x(32) value spaces.
          05 filler                               pic x(13) value spaces.
-      *
+      *Displays Top header row
        01 ws-column-header1.
          05 filler                               pic x value spaces.
          05 filler                               pic x(4) value "Line".
@@ -90,7 +93,7 @@
          05 filler                               pic x(14) value spaces.
          05 filler                               pic xxx value "Tax".
          05 filler                               pic x value spaces.
-      *
+      *Displays lower header row
        01 ws-column-header2.
          05 filler                               pic x value spaces.
          05 filler                               pic xxx value "Num".
@@ -116,9 +119,7 @@
                                                 "Total R  Records: ".
          05 ws-total-r-count                    pic z9.
          05 filler                               pic x(9) value spaces.
-         
-         
-      *
+      *Displays total pay type records.
        01 ws-total-line2.
          05 filler                               pic x(17) value
                                                 "Total CA Records: ".
@@ -132,20 +133,20 @@
                                                 "Total DB Records: ".
          05 ws-total-db-count                    pic z9.
          05 filler                               pic x(13) value spaces.
-      *
+      *Displays Total type percent.
        01 ws-total-line3.
          05 filler                               pic x(21) value
                                                 "Total Type percent : ".
          05 ws-total-type-percent                pic zz9.
          05 filler                               pic x value "%".
          05 filler                               pic x(72) value spaces.
-      *
+      *Displays Most Transactions Store #. 
        01 ws-total-line4.
          05 filler                               pic x(28) value
                                          "Most Transactions  : Store #".
          05 ws-most-transactions                 pic 99.
          05 filler                               pic x(70) value spaces.
-      *
+      *Displays Total Amount and tax owed.
        01 ws-total-line5.
          05 filler                               pic x(18) value
                                                  "Total Amount   : $".
